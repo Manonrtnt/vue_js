@@ -15,14 +15,14 @@
 </head>
 <body >
     <h1 class="text-center">EVENT BINDING</h1>
-    <h2 class="justify-content-center container mt-4 mb-4 p-3 d-flex">v-on:input</h2>
-    <section class="container mt-4 mb-4 p-3 d-flex justify-content-center" id="app">
-        <div >
+    <section class=" container mt-4 mb-4 p-3 d-flex justify-content-center" id="app">
+        <div class="card">
             <div><input v-on:keyup="eventInput($event)" type="text" ></div>
             <p>{{string}}</p>
             <div><input v-on:keyup.escape="eventInput($event)" type="text"></div>
             <p>{{stringEscape}}</p>
             <button v-on:click="alerte()" class="btn btn-info">Alerte</button>
+            <!-- <button @click="alert('Alerte generale!')" class="btn btn-info">Alerte</button> -->
         </div>
     </section>
 

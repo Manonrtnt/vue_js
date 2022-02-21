@@ -12,7 +12,6 @@ Vue.createApp({
             } else {
                 this.string = event.target.value;
             }
-
         },
         alerte(){
             alert("ALERTE GENERALE");

@@ -20,7 +20,8 @@
         <div >
             <div><input v-on:keyup="eventInput($event)" type="text" ></div>
             <p>{{string}}</p>
-            <div><input type="text" ></div>
+            <div><input v-on:keyup.escape="eventInput($event)" type="text"></div>
+            <p>{{stringEscape}}</p>
             <button v-on:click="alerte()" class="btn btn-info">Alerte</button>
         </div>
     </section>

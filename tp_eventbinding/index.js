@@ -13,7 +13,7 @@ Vue.createApp({
                 this.string = event.target.value;
             }
         },
-        alerte(){
+        showAlert(){
             alert("ALERTE GENERALE");
         }
     },

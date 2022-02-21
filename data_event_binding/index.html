@@ -11,17 +11,19 @@
         integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3"
         crossorigin="anonymous"
     />
-    <title>TP EVENTBINDING</title>
+    <title>V-ON - BIND VS V-MODEL</title>
 </head>
 <body >
-    <h1 class="text-center">EVENT BINDING</h1>
-    <section class=" container mt-4 mb-4 p-3 d-flex justify-content-center" id="app">
-        <div class="card">
-            <div><input @keyup="eventInput($event)" type="text" ></div>
-            <p>{{string}}</p>
-            <div><input @keyup.escape="eventInput($event)" type="text"></div>
-            <p>{{stringEscape}}</p>
-            <button @click="showAlert()" class="btn btn-info">Alerte</button>
+    <h1 class="text-center">V-ON - BIND VS V-MODEL</h1>
+    <section id="app" class="container mt-4 mb-4 p-3 d-flex justify-content-center">
+        <div>
+            <h2>v-on + v-bind</h2>
+            <input v-on:keyup="showNameUser($event)" type="text" v-bind:value="nameUser" class="form-control">
+            <p>{{nameUser}}</p>
+            <!--!MODEL VIEW VIEW MODEL-->
+            <h2>v-model</h2>
+            <input v-model="userName" class="form-control" type="text">
+            <p>{{userName}}</p>
         </div>
     </section>
 

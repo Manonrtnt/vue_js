@@ -17,14 +17,14 @@
         }
     </style>
 </head>
-<body>
-    <!-- <section class="card">
-        <p :style="{color:activeColor, fontSize:fontSize+'px'}">blablabla</p>
+<body id="app">
+    <section class="card">
+        <!-- <p :style="{color:activeColor, fontSize:fontSize+'px'}">blablabla</p> -->
         <div class="card-body" @click="selectionCard(1)" :style="{backgroundColor : selectCard1 ? 'red': 'blue' }">Card 1</div>
         <div class="card-body" @click="selectionCard(2)" :style="{backgroundColor : selectCard2 ? 'yellow': 'purple' }">Card 2</div>
-    </section> -->
+    </section>
     <h1 class="text-center">Style dynamique des classes</h1>
-    <div id="app">
+    <div>
         <div class="row row-cols-1 row-cols-md-3 g-4 m-3">
             <div class="col">
                 <div class="card" @click="selectionCard(1)" :class="{class1: selectCard1}">

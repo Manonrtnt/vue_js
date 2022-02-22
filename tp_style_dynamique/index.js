@@ -1,17 +1,14 @@
 Vue.createApp({
     data(){
         return{
-            backgroundColor : 'red',
+            laCouleur : '',
             className : '',
             displayH1 : 'block',
         }
     },
     methods : {
-        changeColor(event){
-            this.backgroundColor = event.target.value;
-        },
         hiddenH1(){
-            if (this.displayH1 === 'block'){
+            if (this.displayH1 == 'block'){
                 this.displayH1 = 'none';
             } else {
                 this.displayH1 = 'block';

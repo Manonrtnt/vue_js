@@ -9,14 +9,14 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>STYLE DYNAMIQUE</title>
 </head>
-<body id="app" class="text-center">
-    <h1 :style="display = 'none'">Tp Dynamic styling</h1>
+<body id="app" class="text-center mx-3">
+    <h1 :style="{display : displayH1}">Tp Dynamic styling</h1>
     <div>
         <input type="text" v-model="className" class="form-control">
         <p :class="changeClass">Hello World (class dynamique)</p>
 
-        <input type="text" v-on:keyup="changeColor($event)" class="form-control">
-        <p :style="backgroundColor = {backgroundColor}">Hello World (couleur dynamique)</p>
+        <input type="text" v-model="laCouleur" class="form-control">
+        <p :style="{backgroundColor : laCouleur}">Hello World (couleur dynamique)</p>
         
         <button @click="hiddenH1">Cacher h1</button>
     </div>

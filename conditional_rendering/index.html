@@ -18,9 +18,9 @@
         <p v-if="listFilm.length === 0">Pas encore de film dans votre liste</p>
         <h3 v-else >{{listFilm[listFilm.length-1]}}</h3>
     </div>
-    <ol>
-        <li v-for="film in listFilm">{{film}}</li>
-    </ol>
+    <ul>
+        <li v-for="(film, unIndex) in listFilm">{{unIndex}} - {{film}}</li>
+    </ul>
     
     <!--! script pour contacter VUE !-->
     <script src="https://unpkg.com/vue@next"></script>

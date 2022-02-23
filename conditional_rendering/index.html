@@ -9,16 +9,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Conditional Rendering</title>
 </head>
-<body id="app" class="text-center mx-3">
-    <h1>Conditional Rendering</h1>
-    <div>
+<body id="app" class="mx-3">
+    <h1 class="text-center">Conditional Rendering</h1>
+    <div class="text-center">
         <h2>🎞️ WatchList 🎞️</h2>
         <input type="text" v-model="myFilm" class="form-control">
         <button v-on:click="addFilm()" class="btn btn-info">Ajouter le film</button>
         <p v-if="listFilm.length === 0">Pas encore de film dans votre liste</p>
         <h3 v-else >{{listFilm[listFilm.length-1]}}</h3>
-        <p v-for="film in listFilm">{{film}}</p>
     </div>
+    <ol>
+        <li v-for="film in listFilm">{{film}}</li>
+    </ol>
     
     <!--! script pour contacter VUE !-->
     <script src="https://unpkg.com/vue@next"></script>

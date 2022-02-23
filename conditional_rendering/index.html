@@ -14,7 +14,7 @@
     <div>
         <h2>🎞️ WatchList 🎞️</h2>
         <input type="text" v-model="myFilm" class="form-control">
-        <button v-on:click="addFilm($event)" class="btn btn-info">Ajouter le film</button>
+        <button v-on:click="addFilm()" class="btn btn-info">Ajouter le film</button>
         <p v-if="listFilm.length === 0">Pas encore de film dans votre liste</p>
         <h3 v-else >{{myFilm}}</h3>
         <p v-for="film in listFilm">{{film}}</p>

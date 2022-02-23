@@ -6,7 +6,7 @@ Vue.createApp({
         }
     },
     methods : {
-        addFilm(event){
+        addFilm(){
             this.listFilm.push(this.myFilm);
         }
     },

@@ -16,12 +16,12 @@
         <input type="text" v-model="articleCourse" class="form-control">
         <button v-on:click="addArticle()" class="btn btn-success">Ajouter article</button>
     </div>
-    <ul :style="{display : displayList}">
+    <ol :style="{display : displayList}">
         <li 
         @click="deleteArticle(unIndex)"
         v-for="article in listCourse">{{article}}
         </li>
-    </ul>
+    </o>
     <button
         class="btn btn-info" 
         @click="showList()">{{message}}

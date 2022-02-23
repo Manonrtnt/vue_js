@@ -4,7 +4,6 @@ Vue.createApp({
             listCourse : [],
             articleCourse : '',
             displayList : 'block',
-            message : 'Masquer la liste',
         }
     },
     methods : {
@@ -17,10 +16,8 @@ Vue.createApp({
         showList(){
             if (this.displayList == 'block'){
                 this.displayList = 'none';
-                this.message = "Afficher la liste"
             } else {
                 this.displayList = 'block';
-                this.message = "Masquer la liste"
             }
         }
     },

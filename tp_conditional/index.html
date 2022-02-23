@@ -17,14 +17,18 @@
         <button v-on:click="addArticle()" class="btn btn-success">Ajouter article</button>
     </div>
     <ol :style="{display : displayList}">
-        <li 
-        @click="deleteArticle(unIndex)"
-        v-for="article in listCourse">{{article}}
+        <li @click="deleteArticle(unIndex)" v-for="article in listCourse">{{article}}
         </li>
-    </o>
-    <button
+    </ol>
+    <button 
+        v-if="displayList === 'none'" 
         class="btn btn-info" 
-        @click="showList()">{{message}}
+        @click="showList()">Afficher la liste
+    </button>
+    <button 
+        v-else 
+        class="btn btn-info" 
+        @click="showList()">Masquer la liste
     </button>
 
     

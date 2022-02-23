@@ -19,7 +19,10 @@
         <h3 v-else >{{listFilm[listFilm.length-1]}}</h3>
     </div>
     <ul>
-        <li v-for="(film, unIndex) in listFilm">{{unIndex}} - {{film}}</li>
+        <li 
+        @click="deleteFilm(unIndex)"
+        v-for="(film, unIndex) in listFilm">{{unIndex}} - {{film}}
+        </li>
     </ul>
     
     <!--! script pour contacter VUE !-->

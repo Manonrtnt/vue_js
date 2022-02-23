@@ -7,18 +7,16 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>STYLE DYNAMIQUE</title>
+    <title>Conditional Rendering</title>
 </head>
 <body id="app" class="text-center mx-3">
-    <h1 :style="{display : displayH1}">Tp Dynamic styling</h1>
+    <h1>Conditional Rendering</h1>
     <div>
-        <input type="text" v-model="className" class="form-control">
-        <p :class="changeClass">Hello World (class dynamique)</p>
-
-        <input type="text" v-model="laCouleur" class="form-control">
-        <p :style="{backgroundColor : laCouleur}">Hello World (couleur dynamique)</p>
-        
-        <button @click="hiddenH1">Cacher h1</button>
+        <h2>🎞️ WatchList 🎞️</h2>
+        <input type="text" v-model="myFilm" class="form-control">
+        <button v-on:click="addFilm($event)">Ajouter le film</button>
+        <p v-if="listFilm.length == 0">Pas encore de film dans votre liste</p>
+        <h3 v-else >{{myFilm}}</h3>
     </div>
     
     <!--! script pour contacter VUE !-->
@@ -30,16 +28,5 @@
     integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" 
     crossorigin="anonymous">
     </script>
-    <!--! Style class -->
-    <style>
-        .hello {
-            background-color: rgb(128, 1, 167);
-            color : white;
-        }
-        .world {
-            background-color: rgb(34, 168, 34);
-            color: yellow;
-        }
-    </style>
 </body>
 </html>
